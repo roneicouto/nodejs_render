@@ -12,6 +12,13 @@ async function connect() {
     console.log("Criou pool de conexões no PostgreSQL!");
  
     const res = await client.query('SELECT NOW()');
+    async function selectCustomers() {
+        const client = await connect();
+        const res = await client.query('SELECT 1 + 1 as RESULT;');
+        return res.rows;
+    }
+     
+    module.exports = { selectCustomers }
     console.log(res.rows[0]);
     client.release();
  
