@@ -1,7 +1,10 @@
+require('dotenv').config();
 var express = require('express');
 var app = express();
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+const db = require('./db');
 
 //rotas
 app.get('/', function (req, res) {
