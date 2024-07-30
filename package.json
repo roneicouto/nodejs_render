@@ -12,6 +12,7 @@
 "main": "index.js",
 "type": "module",
 "scripts": {
+  "start":"yarn run",
 },
 "keywords":"",
 "author": "",
